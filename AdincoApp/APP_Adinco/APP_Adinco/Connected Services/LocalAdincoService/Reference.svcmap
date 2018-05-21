@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9de765c6-de8e-4fb8-9da4-156f29e1ae26" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://mobile.adinco.mx/Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="27353a4f-6f39-4ca3-ae63-b407ebc72172" SourceId="1" SourceUrl="http://mobile.adinco.mx/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service111.xsd" MetadataType="Schema" ID="fe2229a0-3102-4a85-865d-a14721943ef9" SourceId="1" SourceUrl="http://mobile.adinco.mx/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service112.xsd" MetadataType="Schema" ID="a0589662-4e20-4355-8cc3-c2497f24fbfc" SourceId="1" SourceUrl="http://mobile.adinco.mx/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service11.disco" MetadataType="Disco" ID="d42004af-0d7c-4601-a575-abf8440d75a7" SourceId="1" SourceUrl="http://mobile.adinco.mx/Service1.svc?disco" />
+    <MetadataFile FileName="Service113.xsd" MetadataType="Schema" ID="b8c42782-b248-4659-86ec-e04b35974b33" SourceId="1" SourceUrl="http://mobile.adinco.mx/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="52da1f62-8f37-4d05-9be0-f25ee322102d" SourceId="1" SourceUrl="http://mobile.adinco.mx/Service1.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

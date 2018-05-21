@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://mobile.adinco.mx/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://mobile.adinco.mx/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://mobile.adinco.mx/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://mobile.adinco.mx/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AdincoWCFTest" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaNombres_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaNombres" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaNombres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaNombresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNamePrueba_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNamePrueba" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNamePrueba_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNamePruebaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValidateLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateLogin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValidateLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValidateLoginBool_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateLoginBool" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ValidateLoginBool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateLoginBoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ExtraeNombreUsu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExtraeNombreUsu" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ExtraeNombreUsu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExtraeNombreUsuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ExtraeIDUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExtraeIDUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ExtraeIDUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExtraeIDUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIdAprobacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdAprobacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIdAprobacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdAprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTipoAprobacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoAprobacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTipoAprobacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoAprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusAprobacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusAprobacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusAprobacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusAprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNombreTareaAprobacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNombreTareaAprobacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNombreTareaAprobacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNombreTareaAprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetdescripcionAprobacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetdescripcionAprobacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetdescripcionAprobacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetdescripcionAprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDocumentoAprobacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoAprobacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDocumentoAprobacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoAprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CambioContra_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambioContra" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CambioContra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambioContraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AprobarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:AprobarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AprobarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AprobarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RechazarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RechazarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DetalleSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DetalleSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIdAprobacionn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdAprobacionn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIdAprobacionn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdAprobacionnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTipoAprobacionn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoAprobacionn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTipoAprobacionn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoAprobacionnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusAprobacionn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusAprobacionn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusAprobacionn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusAprobacionnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNombreTareaAprobacionn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNombreTareaAprobacionn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNombreTareaAprobacionn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNombreTareaAprobacionnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetdescripcionAprobacionn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetdescripcionAprobacionn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetdescripcionAprobacionn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetdescripcionAprobacionnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDocumentoAprobacionn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoAprobacionn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDocumentoAprobacionn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoAprobacionnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NumPendientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:NumPendientes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_NumPendientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NumPendientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIdAprobacionPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdAprobacionPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIdAprobacionPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdAprobacionPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTipoAprobacionPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoAprobacionPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTipoAprobacionPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoAprobacionPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusAprobacionPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusAprobacionPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStatusAprobacionPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusAprobacionPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNombreTareaAprobacionPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNombreTareaAprobacionPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNombreTareaAprobacionPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNombreTareaAprobacionPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetdescripcionAprobacionPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetdescripcionAprobacionPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetdescripcionAprobacionPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetdescripcionAprobacionPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetdocumentoAprobacionPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetdocumentoAprobacionPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetdocumentoAprobacionPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetdocumentoAprobacionPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EnvioCorreoCambioContra_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnvioCorreoCambioContra" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EnvioCorreoCambioContra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnvioCorreoCambioContraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CambioNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambioNombre" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CambioNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambioNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertafotoString_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertafotoString" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertafotoString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertafotoStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertafotoP_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertafotoP" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertafotoP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertafotoPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_extraeFoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:extraeFoto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_extraeFoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:extraeFotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_extraeFotoS_InputMessage">
+    <wsdl:part name="parameters" element="tns:extraeFotoS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_extraeFotoS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:extraeFotoSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertafoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertafoto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertafoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertafotoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertUserData" message="tns:IService1_InsertUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertUserDataResponse" message="tns:IService1_InsertUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaNombres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListaNombres" message="tns:IService1_ListaNombres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListaNombresResponse" message="tns:IService1_ListaNombres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNamePrueba">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNamePrueba" message="tns:IService1_GetNamePrueba_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNamePruebaResponse" message="tns:IService1_GetNamePrueba_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ValidateLogin" message="tns:IService1_ValidateLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ValidateLoginResponse" message="tns:IService1_ValidateLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLoginBool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ValidateLoginBool" message="tns:IService1_ValidateLoginBool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ValidateLoginBoolResponse" message="tns:IService1_ValidateLoginBool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExtraeNombreUsu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ExtraeNombreUsu" message="tns:IService1_ExtraeNombreUsu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ExtraeNombreUsuResponse" message="tns:IService1_ExtraeNombreUsu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExtraeIDUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ExtraeIDUsuario" message="tns:IService1_ExtraeIDUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ExtraeIDUsuarioResponse" message="tns:IService1_ExtraeIDUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAprobacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetIdAprobacion" message="tns:IService1_GetIdAprobacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetIdAprobacionResponse" message="tns:IService1_GetIdAprobacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoAprobacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTipoAprobacion" message="tns:IService1_GetTipoAprobacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTipoAprobacionResponse" message="tns:IService1_GetTipoAprobacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusAprobacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStatusAprobacion" message="tns:IService1_GetStatusAprobacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStatusAprobacionResponse" message="tns:IService1_GetStatusAprobacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreTareaAprobacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNombreTareaAprobacion" message="tns:IService1_GetNombreTareaAprobacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNombreTareaAprobacionResponse" message="tns:IService1_GetNombreTareaAprobacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetdescripcionAprobacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetdescripcionAprobacion" message="tns:IService1_GetdescripcionAprobacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetdescripcionAprobacionResponse" message="tns:IService1_GetdescripcionAprobacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoAprobacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDocumentoAprobacion" message="tns:IService1_GetDocumentoAprobacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDocumentoAprobacionResponse" message="tns:IService1_GetDocumentoAprobacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambioContra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CambioContra" message="tns:IService1_CambioContra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CambioContraResponse" message="tns:IService1_CambioContra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AprobarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AprobarSolicitud" message="tns:IService1_AprobarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AprobarSolicitudResponse" message="tns:IService1_AprobarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechazarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RechazarSolicitud" message="tns:IService1_RechazarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RechazarSolicitudResponse" message="tns:IService1_RechazarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DetalleSolicitud" message="tns:IService1_DetalleSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DetalleSolicitudResponse" message="tns:IService1_DetalleSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAprobacionn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetIdAprobacionn" message="tns:IService1_GetIdAprobacionn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetIdAprobacionnResponse" message="tns:IService1_GetIdAprobacionn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoAprobacionn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTipoAprobacionn" message="tns:IService1_GetTipoAprobacionn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTipoAprobacionnResponse" message="tns:IService1_GetTipoAprobacionn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusAprobacionn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStatusAprobacionn" message="tns:IService1_GetStatusAprobacionn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStatusAprobacionnResponse" message="tns:IService1_GetStatusAprobacionn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreTareaAprobacionn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNombreTareaAprobacionn" message="tns:IService1_GetNombreTareaAprobacionn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNombreTareaAprobacionnResponse" message="tns:IService1_GetNombreTareaAprobacionn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetdescripcionAprobacionn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetdescripcionAprobacionn" message="tns:IService1_GetdescripcionAprobacionn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetdescripcionAprobacionnResponse" message="tns:IService1_GetdescripcionAprobacionn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoAprobacionn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDocumentoAprobacionn" message="tns:IService1_GetDocumentoAprobacionn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDocumentoAprobacionnResponse" message="tns:IService1_GetDocumentoAprobacionn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NumPendientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/NumPendientes" message="tns:IService1_NumPendientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/NumPendientesResponse" message="tns:IService1_NumPendientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAprobacionPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetIdAprobacionPendiente" message="tns:IService1_GetIdAprobacionPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetIdAprobacionPendienteResponse" message="tns:IService1_GetIdAprobacionPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoAprobacionPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTipoAprobacionPendiente" message="tns:IService1_GetTipoAprobacionPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTipoAprobacionPendienteResponse" message="tns:IService1_GetTipoAprobacionPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusAprobacionPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStatusAprobacionPendiente" message="tns:IService1_GetStatusAprobacionPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStatusAprobacionPendienteResponse" message="tns:IService1_GetStatusAprobacionPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreTareaAprobacionPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNombreTareaAprobacionPendiente" message="tns:IService1_GetNombreTareaAprobacionPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNombreTareaAprobacionPendienteResponse" message="tns:IService1_GetNombreTareaAprobacionPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetdescripcionAprobacionPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetdescripcionAprobacionPendiente" message="tns:IService1_GetdescripcionAprobacionPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetdescripcionAprobacionPendienteResponse" message="tns:IService1_GetdescripcionAprobacionPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetdocumentoAprobacionPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetdocumentoAprobacionPendiente" message="tns:IService1_GetdocumentoAprobacionPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetdocumentoAprobacionPendienteResponse" message="tns:IService1_GetdocumentoAprobacionPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioCorreoCambioContra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EnvioCorreoCambioContra" message="tns:IService1_EnvioCorreoCambioContra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EnvioCorreoCambioContraResponse" message="tns:IService1_EnvioCorreoCambioContra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambioNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CambioNombre" message="tns:IService1_CambioNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CambioNombreResponse" message="tns:IService1_CambioNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertafotoString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertafotoString" message="tns:IService1_InsertafotoString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertafotoStringResponse" message="tns:IService1_InsertafotoString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertafotoP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertafotoP" message="tns:IService1_InsertafotoP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertafotoPResponse" message="tns:IService1_InsertafotoP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="extraeFoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/extraeFoto" message="tns:IService1_extraeFoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/extraeFotoResponse" message="tns:IService1_extraeFoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="extraeFotoS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/extraeFotoS" message="tns:IService1_extraeFotoS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/extraeFotoSResponse" message="tns:IService1_extraeFotoS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertafoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Insertafoto" message="tns:IService1_Insertafoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertafotoResponse" message="tns:IService1_Insertafoto_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserData">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaNombres">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListaNombres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNamePrueba">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNamePrueba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <soap:operation soapAction="http://tempuri.org/IService1/ValidateLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLoginBool">
+      <soap:operation soapAction="http://tempuri.org/IService1/ValidateLoginBool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExtraeNombreUsu">
+      <soap:operation soapAction="http://tempuri.org/IService1/ExtraeNombreUsu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExtraeIDUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ExtraeIDUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAprobacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetIdAprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoAprobacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTipoAprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusAprobacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStatusAprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreTareaAprobacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNombreTareaAprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetdescripcionAprobacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetdescripcionAprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoAprobacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDocumentoAprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioContra">
+      <soap:operation soapAction="http://tempuri.org/IService1/CambioContra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AprobarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IService1/AprobarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechazarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IService1/RechazarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IService1/DetalleSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAprobacionn">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetIdAprobacionn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoAprobacionn">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTipoAprobacionn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusAprobacionn">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStatusAprobacionn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreTareaAprobacionn">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNombreTareaAprobacionn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetdescripcionAprobacionn">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetdescripcionAprobacionn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoAprobacionn">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDocumentoAprobacionn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NumPendientes">
+      <soap:operation soapAction="http://tempuri.org/IService1/NumPendientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAprobacionPendiente">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetIdAprobacionPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoAprobacionPendiente">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTipoAprobacionPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusAprobacionPendiente">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStatusAprobacionPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNombreTareaAprobacionPendiente">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNombreTareaAprobacionPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetdescripcionAprobacionPendiente">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetdescripcionAprobacionPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetdocumentoAprobacionPendiente">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetdocumentoAprobacionPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioCorreoCambioContra">
+      <soap:operation soapAction="http://tempuri.org/IService1/EnvioCorreoCambioContra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioNombre">
+      <soap:operation soapAction="http://tempuri.org/IService1/CambioNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertafotoString">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertafotoString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertafotoP">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertafotoP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extraeFoto">
+      <soap:operation soapAction="http://tempuri.org/IService1/extraeFoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extraeFotoS">
+      <soap:operation soapAction="http://tempuri.org/IService1/extraeFotoS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertafoto">
+      <soap:operation soapAction="http://tempuri.org/IService1/Insertafoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://mobile.adinco.mx/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
